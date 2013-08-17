@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="newpost-area">
+    <a class="login-link" href="/blog/newpost">new post</a>
+  </div>
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+  <div class="age">
+    queried {{queryage}} seconds ago
+  </div
+
+{% endblock %}
